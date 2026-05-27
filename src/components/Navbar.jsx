@@ -37,7 +37,7 @@ export default function Navbar() {
             src="/logo.png"
             alt="DucTM"
             className="
-            h-14
+            h-50
             object-contain
             "
           />
