@@ -1,97 +1,184 @@
 # DucTM Portfolio
 
-Website portfolio cá nhân dùng để giới thiệu bản thân, dịch vụ và các dự án đã thực hiện.
+Modern portfolio website for showcasing real-world software products, dashboards, and business solutions.
 
-## Mục tiêu dự án
+🌐 Live Website: https://taminhduc.com
 
-Dự án được xây dựng nhằm tạo một website giới thiệu chuyên nghiệp cho freelancer developer, tập trung vào đối tượng người dùng cuối và khách hàng không chuyên kỹ thuật.
+---
 
-Website cho phép:
+## Overview
 
-- Giới thiệu thông tin cá nhân
-- Hiển thị danh sách dự án
-- Xem chi tiết từng dự án
-- Hiển thị gallery hình ảnh
-- Viết mô tả dự án bằng Markdown
-- Quản lý dự án qua trang Admin
-- Gửi yêu cầu tư vấn qua form liên hệ
+This project is a modern portfolio platform built for presenting software products in a clean and business-focused way.
 
-## Công nghệ sử dụng
+Instead of a traditional developer portfolio, the website focuses on:
 
-- React
-- Vite
-- Tailwind CSS
-- React Router
-- Supabase Database
-- Supabase Storage
-- Supabase Auth
-- React Markdown
-- Formspree
-- Vercel
+* Product showcase
+* Business-oriented UI
+* Real project presentation
+* Responsive experience
+* Lightweight CMS-style management
 
-## Tính năng chính
+The goal is to help potential clients quickly understand:
 
-### Trang chủ
+* What products are available
+* What problems they solve
+* How they look in real usage
+* Estimated pricing and development scope
 
-- Hero giới thiệu cá nhân
-- Danh sách dự án nổi bật
-- Bảng giá tham khảo
-- Form liên hệ tư vấn
-- Footer
+---
 
-### Trang chi tiết dự án
+## Features
 
-- Ảnh cover
-- Mô tả ngắn
-- Nội dung chi tiết dạng Markdown
-- Tính năng nổi bật
-- Gallery hình ảnh
-- Xem ảnh phóng to
-- Video demo
-- Giá và thời gian triển khai
+### Public Website
 
-### Trang Admin
+* Modern responsive landing page
+* Dynamic project listing
+* Project detail pages
+* Image gallery
+* Markdown project content
+* Pricing section
+* Social & community links
+* Contact section
+* SEO optimization
+* Open Graph support
 
-- Đăng nhập bằng Supabase Auth
-- Thêm dự án mới
-- Sửa dự án
-- Xóa dự án
-- Upload nhiều hình ảnh
-- Tự tạo slug từ tên dự án
-- Viết nội dung chi tiết bằng Markdown
+### Admin Dashboard
 
-## Cấu trúc thư mục
+* Create/edit/delete projects
+* Upload cover images
+* Manage project galleries
+* Markdown content editor
+* Feature management
+* Video/demo links
+* Pricing management
 
-```txt
-src/
-├── components/
-│   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── ProjectSection.jsx
-│   ├── ProjectCard.jsx
-│   ├── PricingSection.jsx
-│   ├── ContactSection.jsx
-│   ├── Footer.jsx
-│   ├── AdminTable.jsx
-│   └── ProtectedRoute.jsx
-│
-├── pages/
-│   ├── Home.jsx
-│   ├── ProjectDetail.jsx
-│   ├── Admin.jsx
-│   └── Login.jsx
-│
-├── services/
-│   ├── supabase.js
-│   ├── projectService.js
-│   ├── galleryService.js
-│   ├── storageService.js
-│   └── authService.js
-│
-└── utils/
-    └── slugify.js
-```
+---
 
-## Live Demo
+## Tech Stack
 
-https://taminhduc.com
+### Frontend
+
+* React
+* Vite
+* TailwindCSS
+* React Router
+
+### Backend / Database
+
+* Supabase
+* PostgreSQL
+
+### Services
+
+* Formspree (contact form)
+* Cloudflare Email Routing
+* GitHub Pages / Custom Domain
+
+---
+
+## Database Structure
+
+### projects
+
+Stores:
+
+* title
+* slug
+* summary
+* content
+* features
+* cover_image
+* pricing
+* duration
+* demo_url
+* github_url
+
+### project_images
+
+Stores:
+
+* project_id
+* image_url
+* sort_order
+
+---
+
+## UI / Design Direction
+
+The website uses:
+
+* Light Premium UI
+* Gradient Accent System
+* Clean whitespace
+* Product-focused presentation
+* Responsive mobile-first layout
+
+Inspired by modern SaaS landing pages.
+
+---
+
+## Responsive Design
+
+Optimized for:
+
+* Desktop
+* Tablet
+* Mobile devices
+
+Includes:
+
+* Mobile navigation
+* Responsive hero section
+* Adaptive project layouts
+
+---
+
+## SEO
+
+Includes:
+
+* Meta tags
+* Open Graph tags
+* Custom favicon
+* OG image
+* Custom domain support
+
+---
+
+## Deployment
+
+### Domain
+
+* taminhduc.com
+
+### Repository
+
+* GitHub
+
+### Hosting
+
+* Vercel / GitHub Pages
+
+---
+
+## Contact
+
+📧 [contact@taminhduc.com](mailto:contact@taminhduc.com)
+
+---
+
+## Future Improvements
+
+* Multi-language support
+* Blog section
+* Project categories
+* Dark mode toggle
+* Analytics dashboard
+* Client testimonials
+* CMS integration
+
+---
+
+## Author
+
+Developed by DucTM.
