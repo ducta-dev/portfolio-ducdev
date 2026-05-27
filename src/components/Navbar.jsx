@@ -1,139 +1,148 @@
+import { useState } from "react";
+
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header
       className="
       sticky
       top-0
       z-50
-
       bg-white/80
-      backdrop-blur
+      backdrop-blur-xl
+      border-b
+      border-slate-200
       "
     >
       <nav
         className="
         max-w-7xl
         mx-auto
-
-        h-24
-
-        px-8
-
+        px-6
+        lg:px-8
+        h-20
         flex
         items-center
         justify-between
         "
       >
-        {/* Logo */}
-
+        {/* LOGO */}
         <a
           href="/"
           className="
           flex
           items-center
+          gap-3
           "
         >
           <img
             src="/logo.png"
             alt="DucTM"
             className="
-            h-50
+            h-40
+            w-auto
             object-contain
             "
           />
         </a>
 
-        {/* Menu */}
-
+        {/* DESKTOP MENU */}
         <div
           className="
           hidden
           md:flex
-
           items-center
-          gap-10
+          gap-8
+          font-medium
+          text-slate-700
           "
         >
           <a
             href="#projects"
-            className="
-            text-slate-700
-            hover:text-red-500
-            transition
-            "
+            className="hover:text-blue-600 transition"
           >
             Dự án
           </a>
 
           <a
             href="#pricing"
-            className="
-            text-slate-700
-            hover:text-red-500
-            transition
-            "
+            className="hover:text-blue-600 transition"
           >
             Bảng giá
           </a>
 
           <a
-            href="#about"
-            className="
-            text-slate-700
-            hover:text-red-500
-            transition
-            "
-          >
-            Giới thiệu
-          </a>
-
-          <a
             href="#contact"
-            className="
-            text-slate-700
-            hover:text-red-500
-            transition
-            "
+            className="hover:text-blue-600 transition"
           >
             Liên hệ
           </a>
-
-          {/* CTA */}
-
-          <button
-            className="
-            px-7
-            py-3
-
-            rounded-full
-
-            text-white
-            font-semibold
-
-            bg-gradient-to-r
-            from-red-500
-            to-blue-600
-
-            hover:scale-105
-            transition
-            "
-          >
-            Nhận báo giá
-          </button>
         </div>
 
-        {/* Mobile */}
-
+        {/* MOBILE BUTTON */}
         <button
+          onClick={() => setOpen(!open)}
           className="
           md:hidden
-
           text-3xl
+          font-bold
+          text-slate-800
           "
         >
-          ☰
+          {open ? "×" : "☰"}
         </button>
       </nav>
+
+      {/* MOBILE MENU */}
+      {open && (
+        <div
+          className="
+          md:hidden
+          bg-white
+          border-t
+          border-slate-200
+          px-6
+          py-6
+          shadow-xl
+          "
+        >
+          <div
+            className="
+            flex
+            flex-col
+            gap-5
+            text-lg
+            font-semibold
+            text-slate-700
+            "
+          >
+            <a
+              href="#projects"
+              onClick={() => setOpen(false)}
+              className="hover:text-blue-600"
+            >
+              Dự án
+            </a>
+
+            <a
+              href="#pricing"
+              onClick={() => setOpen(false)}
+              className="hover:text-blue-600"
+            >
+              Bảng giá
+            </a>
+
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="hover:text-blue-600"
+            >
+              Liên hệ
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
